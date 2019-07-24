@@ -5,7 +5,7 @@ window.Shop = {
 
     addProductToCart: function(productId){
         let body = {
-            customerId: 2,
+            customerId: 12,
             productId: productId
         };
         $.ajax({
@@ -15,7 +15,7 @@ window.Shop = {
             contentType: "application/json",
             data: JSON.stringify(body)
         }).done(function(){
-            console.log('success');
+            windows.location.replace("cart.html");
         });
     },
 
